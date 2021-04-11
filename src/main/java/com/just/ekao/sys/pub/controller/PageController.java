@@ -9,4 +9,8 @@ public class PageController {
     public String toLogin(){
         return "login";
     }
+    @RequestMapping("/showMain")
+    public String toMainMenu(){
+        return "mainMenu";
+    }
 }
