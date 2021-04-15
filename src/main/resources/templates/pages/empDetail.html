@@ -1,0 +1,34 @@
+<table id="table"></table>
+<div id="toolbar">
+  <button type="button" class="btn btn-primary">编辑</button>
+  <button type="button" class="btn btn-danger">删除</button>
+</div>
+<script>
+$("#table").bootstrapTable({
+url: 'http://localhost/other/data1.json',
+pagination: true,
+search: true,
+pageSize: 5,
+toolbar: "#toolbar",//指定工具栏
+pageList: [5, 10, 20, 50],//分页步进值
+columns: [
+    { title: "全选",
+        field: "select",
+        checkbox: true,
+        width: 20,//宽度
+        align: "center",//水平
+        valign: "middle"//垂直
+ },
+{field: 'id',       title: '工号' , sortable: true },
+{field: 'name',     title: '姓名'},
+{field: 'sex',      title: '性别'},
+{field: 'dep',      title: '部门'},
+{field: 'position', title: '职位'},
+{field: 'city',     title: '现居地'}
+],
+onClickRow: function(row, $element) {
+        //$element是当前tr的jquery对象
+        $element.css("background-color", "green");
+    },//单击row事件
+})
+</script>
