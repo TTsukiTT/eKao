@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="/dist/css/adminlte.min.css">
   <script src="/plugins/jquery/jquery.min.js"></script>
   <link rel="stylesheet" href="/other/bootstrap-table.min.css">
-
+  <link rel="shortcut icon" href="/favicon.ico" th:href="@{/static/favicon.ico}"/>
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
@@ -93,13 +93,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a id="empQry" onclick="doEmpQuery()" href="#" class="nav-link">
+                <a id="empQry" onclick="doActivePage('empManage','员工查询','empQuery',1)" href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>员工查询</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link" onclick="doAddEmp()">
+                <a href="#" class="nav-link" onclick="doActivePage('empManage','新增员工','addEmp',2)">
                   <i class="far fa-circle nav-icon"></i>
                   <p>新增员工</p>
                 </a>
@@ -107,42 +107,15 @@
             </ul>
           </li>
           <li id="schManage" class="nav-item menu-close ">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link" onclick="doActivePage('schManage','排班信息管理','manageWT',0)">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 排班管理
-                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-th"></i>
-                  <p>
-                    新增班次
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-th"></i>
-                  <p>
-                    修改班次
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-th"></i>
-                  <p>
-                    删除班次
-                  </p>
-                </a>
-              </li>
-            </ul>
           </li>
           <li id="depManage" class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link" >
               <i class="nav-icon fas fa-columns"></i>
               <p>
                 部门管理
@@ -151,21 +124,15 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" onclick="doActivePage('depManage','部门信息列表','depList',1)">
                   <i class="far fa-circle nav-icon"></i>
                   <p>部门列表</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" onclick="doActivePage('depManage','新增部门信息','addDep',2)">
                   <i class="far fa-circle nav-icon"></i>
                   <p>新增部门</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>删除部门</p>
                 </a>
               </li>
             </ul>
@@ -180,7 +147,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" onclick="doActivePage('attManage','加班申请列表','OTRequest',1)">
                   <i class="far fa-circle nav-icon"></i>
                   <p>加班申请
                   <span class="badge badge-danger right">0</span>
@@ -188,19 +155,19 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" onclick="doActivePage('attManage','出差人员列表','tripList',2)">
                   <i class="far fa-circle nav-icon"></i>
                   <p>出差信息</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                <a href="#" class="nav-link" onclick="doActivePage('attManage','员工考勤记录查询','attQuery',3)">
+                  <i class="far fa-circle nav-icon" ></i>
                   <p>考勤记录</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" onclick="doActivePage('attManage','员工日终处理','dailyProcessList',4)">
                   <i class="far fa-circle nav-icon"></i>
                   <p>日终处理</p>
                 </a>
@@ -217,31 +184,31 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" onclick="doActivePage('reportManage','员工信息导出','empQuery',1)">
                   <i class="far fa-circle nav-icon"></i>
                   <p>员工信息</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" onclick="doActivePage('reportManage','部门信息导出','depList',2)">
                   <i class="far fa-circle nav-icon"></i>
                   <p>部门信息</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" onclick="doActivePage('reportManage','考勤记录导出','empQuery',3)">
                   <i class="far fa-circle nav-icon"></i>
                   <p>考勤记录</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" onclick="doActivePage('reportManage','加班信息导出','empQuery',4)">
                   <i class="far fa-circle nav-icon"></i>
                   <p>加班记录</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" onclick="doActivePage('reportManage','日终处理信息导出','empQuery',5)">
                   <i class="far fa-circle nav-icon"></i>
                   <p>日终处理</p>
                 </a>
@@ -258,13 +225,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" onclick="doActivePage('sysManage','系统时间设置','sysTimeSet',1)">
                   <i class="far fa-circle nav-icon"></i>
                   <p>时间设置</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" onclick="doActivePage('sysManage','修改密码','changePwd',2)">
                   <i class="far fa-circle nav-icon"></i>
                   <p>修改密码</p>
                 </a>
@@ -379,7 +346,7 @@
                   '缺勤人数',
                   '正常考勤',
                   '请假人数',
-                  '出勤人数'
+                  '出差人数'
               ],
               datasets: [
                   {
@@ -455,7 +422,7 @@
           })
 }
   )
-  /*员工查询*/
+ /* /!*员工查询*!/
 function doEmpQuery() {
   clearActive();
   $("#empManage a").eq(0).addClass("nav-item menu-close active");
@@ -464,7 +431,7 @@ function doEmpQuery() {
   $(".content").load("/empQuery");
 
   }
-  /*新增员工*/
+  /!*新增员工*!/
   function doAddEmp() {
       clearActive();
       $("#empManage a").eq(0).addClass("nav-item menu-close active");
@@ -472,22 +439,39 @@ function doEmpQuery() {
       $("#mainTitle").text("新增员工信息");
       $(".content").load("/addEmp");
   }
-  /*排班管理*/
-  /*新增班次*/
+  /!*排班管理*!/
   function doAddWT() {
       clearActive();
       $("#schManage a").eq(0).addClass("nav-item menu-close active");
       $("#schManage a").eq(1).addClass("nav-item menu-close active");
-      $("#mainTitle").text("新增工作班次");
-      $(".content").load("/addWT");
+      $("#mainTitle").text("排班信息管理");
+      $(".content").load("/manageWT");
   }
-  /*新增班次*/
-  function doAddWT() {
+  /!*部门管理*!/
+  //部门列表
+  function doDepManage(){
       clearActive();
-      $("#schManage a").eq(0).addClass("nav-item menu-close active");
-      $("#schManage a").eq(1).addClass("nav-item menu-close active");
-      $("#mainTitle").text("新增工作班次");
-      $(".content").load("/addWT");
+      $("#depManage a").eq(0).addClass("nav-item menu-close active");
+      $("#depManage a").eq(1).addClass("nav-item menu-close active");
+      $("#mainTitle").text("部门列表");
+      $(".content").load("/depList");
+  }
+  //新增部门
+  function doAddDep(){
+      clearActive();
+      $("#depManage a").eq(0).addClass("nav-item menu-close active");
+      $("#depManage a").eq(2).addClass("nav-item menu-close active");
+      $("#mainTitle").text("新增部门");
+      $(".content").load("/addDep");
+  }*/
+  function doActivePage(navbarID,mainTitle,forwardPage,activeIndex) {
+      clearActive();
+      var bar = $("#"+navbarID+" a");
+      console.log(bar+navbarID);
+      bar.eq(0).addClass("nav-item menu-close active");
+      bar.eq(activeIndex).addClass("nav-item menu-close active");
+      $("#mainTitle").text(mainTitle);
+      $(".content").load("/"+forwardPage);
   }
 function clearActive() {
   $("li a").removeClass("active");
