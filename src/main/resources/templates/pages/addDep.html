@@ -1,0 +1,37 @@
+<div id="mainScr">
+  <form action="#">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">部门编号</label>
+        <input type="text" class="form-control" id="inputEmail4" placeholder="Dep No.">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">部门名称</label>
+        <input type="text" class="form-control" id="inputPassword4" placeholder="Dep Name">
+      </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputAddress">负责人</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="Dep Header">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="inputCity">隶属部门</label>
+        <input type="text" class="form-control" id="inputCity" placeholder="Dep Father">
+    </div>
+    </div>
+      <div class="form-row">
+      <div class="form-group">
+        <label for="position">部门介绍</label>
+        <textarea type="text" class="form-control" id="position" placeholder="Dep Desc" style="width: 606%;height: 177%"></textarea>
+      </div>
+      </div>
+
+    <button id="sub" class="btn btn-primary" onclick="toDetail()" style="margin-top: 9%">提交</button>
+  </form>
+</div>
+<script>
+    function toDetail() {
+        doActivePage('depManage','部门信息列表','depList',1);
+    }
+</script>

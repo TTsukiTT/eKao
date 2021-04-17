@@ -1,0 +1,26 @@
+[
+  {
+    "trip_emp_id": "001",
+    "trip_emp_name":"妮妮",
+    "trip_emp_dep": "人事部",
+    "trip_start": "2021/04/07 19:00:00",
+    "trip_end":"2021/04/19 21:00:00",
+    "trip_hours": "12"
+  },
+  {
+    "trip_emp_id": "014",
+    "trip_emp_name":"孙悟空",
+    "trip_emp_dep": "财务部",
+    "trip_start": "2021/04/07 19:00:00",
+    "trip_end":"2021/04/09 20:00:00",
+    "trip_hours": "2"
+  },
+  {
+    "trip_emp_id": "022",
+    "trip_emp_name":"熊大",
+    "trip_emp_dep": "人事部",
+    "trip_start": "2021/04/07 19:00:00",
+    "trip_end":"2021/05/07 22:30:00",
+    "trip_hours": "30"
+  }
+]

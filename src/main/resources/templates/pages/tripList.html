@@ -1,0 +1,16 @@
+<table id="table"></table>
+<div id="toolbar">
+  <button type="button" class="btn btn-primary">安排出差</button>
+  <button type="button" class="btn btn-danger">结束出差</button>
+</div>
+<script>
+    var a = [
+        ['trip_emp_id','出差工号'],
+        ['trip_emp_name','出差姓名'],
+        ['trip_emp_dep','所属部门'],
+        ['trip_start','出差开始时间'],
+        ['trip_end','出差结束时间'],
+        ['trip_hours','出差时长(day)']
+    ];
+    genTable('http://localhost/other/data5.json',a);
+</script>

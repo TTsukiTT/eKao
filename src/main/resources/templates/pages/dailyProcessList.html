@@ -1,0 +1,33 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">2020.4</a></li>
+    <li class="breadcrumb-item active" ><a href="#">2020.5</a></li>
+    <li class="breadcrumb-item active" ><a href="#">2020.6</a></li>
+    <li class="breadcrumb-item active" ><a href="#">2020.7</a></li>
+    <li class="breadcrumb-item active" ><a href="#">2020.8</a></li>
+    <li class="breadcrumb-item active" ><a href="#">2020.9</a></li>
+    <li class="breadcrumb-item active" ><a href="#">2020.10</a></li>
+    <li class="breadcrumb-item active" ><a href="#">2020.11</a></li>
+    <li class="breadcrumb-item active" ><a href="#">2020.12</a></li>
+    <li class="breadcrumb-item active" ><a href="#">2021.1</a></li>
+    <li class="breadcrumb-item active" ><a href="#">2021.2</a></li>
+    <li class="breadcrumb-item active" ><a href="#">2021.3</a></li>
+    <li class="breadcrumb-item" aria-current="page"> <a href="#"  style="color: grey">2021.4</a></li>
+  </ol>
+</nav>
+
+<table id="table"></table>
+<div id="toolbar">
+  <button type="button" class="btn btn-primary">处理生效</button>
+  <button type="button" class="btn btn-danger">拒绝处理</button>
+</div>
+<script>
+    var a = [
+        ['dp_emp_id','处理工号'],
+        ['dp_emp_name','处理姓名'],
+        ['dp_emp_dep','所属部门'],
+        ['dp_reason','处理原因'],
+        ['dp_detail','处理结果']
+    ];
+    genTable('http://localhost/other/data6.json',a);
+</script>

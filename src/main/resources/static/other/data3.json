@@ -1,0 +1,24 @@
+[
+{
+"dep_id":"001",
+"dep_name":"总经理办公室",
+"dep_header":"宋义进",
+"dep_father":"无",
+"dep_desc":"负责全公司协调，包括制度、接待、会议等，属于公司中心决策部门。"
+},
+{
+  "dep_id":"002",
+  "dep_name":"人力资源部",
+  "dep_header":"姜承禄",
+  "dep_father":"001",
+  "dep_desc":"公司人事、培训、劳资、考勤、保险、职称等。"
+},
+{
+"dep_id":"003",
+"dep_name":"财务部",
+"dep_header":"凌凌漆",
+"dep_father":"001",
+"dep_desc":"费用收支、预决算、工商税务等；"
+}
+
+]

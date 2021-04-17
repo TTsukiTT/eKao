@@ -1,0 +1,17 @@
+<table id="table"></table>
+<div id="toolbar">
+  <button type="button" class="btn btn-primary">同意</button>
+  <button type="button" class="btn btn-danger">拒绝</button>
+</div>
+<script>
+  var a = [
+      ['ot_emp_id','请求工号'],
+      ['ot_emp_name','请求姓名'],
+      ['ot_emp_dep','所属部门'],
+      ['ot_time','请求时间'],
+      ['ot_start','加班开始时间'],
+      ['ot_end','加班结束时间'],
+      ['ot_hours','请求加班时长']
+      ];
+    genTable('http://localhost/other/data4.json',a);
+</script>
