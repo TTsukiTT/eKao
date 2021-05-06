@@ -9,9 +9,9 @@
 },
   {
     "wt_id":"01",
-    "wt_name":"早班",
-    "wt_start_time": "09:00",
-    "wt_end_time": "18:00",
+    "wt_name":"晚班",
+    "wt_start_time": "18:00",
+    "wt_end_time": "23:00",
     "wt_hours" :"8",
     "wt_total_hours": "9"
   },

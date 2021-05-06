@@ -1,0 +1,16 @@
+<form>
+  <div class="form-group row">
+    <input type="text" class="form-control col-sm-6" id="old_pwd"  placeholder="旧密码">
+    <input type="text" class="form-control col-sm-6" id="new_pwd"  placeholder="新密码">
+    <button type="submit" class="btn btn-primary col-sm-3" onclick="doCard(1)">更改密码</button>
+  </div>
+
+</form>
+<script>
+    function doCard(stat) {
+        if(stat==1){
+            alert("更改成功！")
+        }
+    }
+
+</script>

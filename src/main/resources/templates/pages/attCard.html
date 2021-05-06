@@ -1,8 +1,32 @@
 <form>
   <div class="form-group row">
     <input type="text" class="form-control col-sm-6" id="emp_id" aria-describedby="emailHelp" placeholder="工号">
-    <button type="submit" class="btn btn-primary col-sm-3">上班打卡</button>
-    <button type="submit" class="btn btn-danger col-sm-3">下班打卡</button>
+    <button type="submit" class="btn btn-primary col-sm-3" onclick="doCard(1)">上班打卡</button>
+    <button type="submit" class="btn btn-danger col-sm-3" onclick="doCard(2)">下班打卡</button>
+  </div>
+  <div>&nbsp;</div>
+  <div class="form-group row">
+    <input type="text" class="form-control col-sm-6" id="start" aria-describedby="emailHelp" placeholder="加班开始时间">
+  </div>
+  <div class="form-group row">
+    <input type="text" class="form-control col-sm-6" id="end" aria-describedby="emailHelp" placeholder="加班结束时间">
+  </div>
+  <div class="form-group row">
+    <button type="submit" class="btn btn-danger col-sm-3" onclick="doCard(3)">申请加班</button>
   </div>
 
 </form>
+<script>
+  function doCard(stat) {
+      if(stat==1){
+          alert("上班打卡成功！")
+      }
+      else if (stat==2) {
+          alert("下班打卡成功！")
+      }
+      else {
+          alert("加班申请已提交！")
+      }
+  }
+
+</script>
